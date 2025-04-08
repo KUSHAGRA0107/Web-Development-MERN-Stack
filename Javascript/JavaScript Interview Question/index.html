@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myParagraphId">This is Paragraph</p>
+    <button id = "button">Click Me</button>
+    <script>
+        let Paragraph = document.getElementById("myParagraphId");
+        let button = document.getElementById("button");
+        button.addEventListener("click", changePara);
+        function changePara(){
+            Paragraph.textContent = "This is Being changed by Javascript";  
+        }
+    </script>
+</body>
+</html>
