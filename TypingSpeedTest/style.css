@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;background: radial-gradient(circle, rgba(255,182,193,1) 33%, rgba(244,117,184,1) 91%, rgba(191,139,167,1) 100%) ;
+}
+
+.wrapper {
+    width: 770px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Content Box */
+.wrapper .content-box {
+    padding: 13px 20px 15px;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Typing Text */
+.typing-text p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Content Container */
+.content-box .content {
+    margin-top: 17px;
+    display: flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+}
+
+/* Result Details */
+.content-box .result-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.input-field{
+    padding: 13px 20px 0px;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
+}
+/* Result List Styling */
+.result-details ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 140px);
+}
+
+/* result list-item property */
+.result-details li{
+    display: flex;
+    height: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:active{
+    transform: scale(0.976);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #bfbfbf;
+    outline: none;
+    transition: 0.3 ease-in-out;
+}
+
+/* Focus effect for better UX */
+.input-field:focus {
+    border-color: #ff7eb3;
+    box-shadow: 0 0 8px rgba(255, 126, 179, 0.5);
+}
+
+.typing-text p span{
+    position: relative;
+}
+
+.typing-text p span.active{
+    color: orange;
+}
+
+.typing-text p span.correct{
+    color: green;
+}
+
+.typing-text p span.incorrect{
+    color: red;
+}
+
+::selection{
+    color: #fff;
+    background-color: orange;
+}

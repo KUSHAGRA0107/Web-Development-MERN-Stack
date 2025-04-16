@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey-Type</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- this is the main container of my typing test application -->
+    <div class="wrapper">
+        <!-- this is the input where the text displayed would be entered for the test -->
+        <input type="text" class="input-field">
+        <!-- this is the box where the content would be displayed so that is to be typed by the user -->
+        <div class="content-box">
+
+            <div class="typing-text">
+                <!-- Text to be typed by the user -->
+                <p></p>
+            </div>
+
+            <!-- this contain all the necessary details to be implemented on the user screen -->
+            <div class="content">
+                <div class="result-details">
+                    <ul>
+                        <li class="time">
+                            <p>Time Left : &nbsp;</p>
+                            <span><b>60s</b></span>
+                        </li>
+                        <li class="mistake">
+                            <p>Mistakes : &nbsp;</p>
+                            <span><b>0</b></span>
+                        </li>
+                        <li class="wpm">
+                            <p>WPM : &nbsp;</p>
+                            <span><b>0</b></span>
+                        </li>
+                        <li class="cpm">
+                            <p>CPM : &nbsp;</p>
+                            <span><b>0</b></span>
+                        </li>
+                    </ul>
+                    <button class="button">Try Again</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

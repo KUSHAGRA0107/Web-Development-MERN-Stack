@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 15px solid green;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            position: absolute;
+            top : 25%;
+            left: 40%;
+            border-radius: 5px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" onmousedown="onMouseDown()" onmouseup="onMouseUp()">
+        MouseUp, MouseDown
+    </div>
+    <script>
+        var container = document.getElementById('container');
+        function onMouseUp(){
+            container.style.backgroundColor = "red";
+        }
+        function onMouseDown(){
+            container.style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>

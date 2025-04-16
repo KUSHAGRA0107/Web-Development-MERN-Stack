@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <button id="myButton">Click To Add More Button</button>
+
+    <script>
+        let container = document.getElementById("container");
+        let myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", addButton);
+        function addButton() {
+            let button = document.createElement("button");
+            button.textContent = "Click Me";
+            container.appendChild(button);
+        }
+    </script>
+</body>
+
+</html>
