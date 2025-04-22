@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JavaScript has Three Types of Popup - ALERT, CONFIRM, PROMPT -->
+    <button id = "alert-box">Click For Alert</button>
+    <button id = "confirm-box">Click For confirm</button>
+    <button id = "prompt-box">Click For prompt</button>
+
+    <script>
+        let alertbox = document.getElementById('alert-box');
+        let confirmbox = document.getElementById('confirm-box');
+        let promptbox = document.getElementById('prompt-box');
+        alertbox.addEventListener('click', getAlert);
+        confirmbox.addEventListener('click', getconfirm);
+        promptbox.addEventListener('click', getprompt);
+        function getAlert(){
+            alert('This is an alert box');
+        }
+
+        function getprompt(){
+            if(prompt("Enter Your Age") == 18){
+                alert("age verified");
+            }else{
+                alert("age not verified");
+            }
+        }
+
+        function getconfirm(){
+            if(confirm("Press Ok")){
+                alert("ok");
+            }else{
+                alert("no");
+            }
+        }
+
+    </script>
+</body>
+</html>

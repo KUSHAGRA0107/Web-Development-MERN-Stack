@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        div{
+            height: 20px;
+            width: max-content;
+            padding: 20px;
+            background-color: pink;
+        }
+        span{
+            background-color: red;
+            padding: 20px;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>
+            <button>Click Me</button>
+        </span>
+    </div>
+
+</body>
+    <script>
+        let body = document.getElementsByTagName('body')[0];
+        let div = document.getElementsByTagName('div')[0];
+        let span = document.getElementsByTagName('span')[0];
+        let button = document.getElementsByTagName('button')[0];
+       
+        body.addEventListener('click', bodyPressed);
+        div.addEventListener('click', divPressed);
+        span.addEventListener('click', spanPressed);
+        button.addEventListener('click', buttonPressed);
+        function bodyPressed(event){
+            event.stopPropagation();
+            console.log("body was pressed");
+        }
+        function divPressed(event){
+            event.stopPropagation();
+            console.log("div was pressed");
+        }
+        function spanPressed(event){
+            /*In Order to stop the iteration we can use event.stopPropogation()*/
+            event.stopPropagation();
+            console.log("span was pressed");
+        }
+        function buttonPressed(){
+            event.stopPropagation();
+            console.log("Button was pressed");
+        }
+    </script>
+</html>
+
+<!-- Event bubbling in JavaScript is a mechanism where an event triggered on a child element propagates upward through its ancestors in the DOM.
+It allows parent elements to respond to events triggered by their child elements.
+Propagation Direction: In event bubbling, the event starts at the target element and propagates upward through its parent elements to the root of the DOM.
+Default Behavior: Event bubbling is enabled by default in JavaScript.
+Event Listeners: If multiple event listeners are attached in the bubbling phase, they are executed in sequence, starting from the innermost target element. -->

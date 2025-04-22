@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        div{
+            height: 20px;
+            width: max-content;
+            padding: 20px;
+            background-color: pink;
+        }
+        span{
+            background-color: red;
+            padding: 20px;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>
+            <button>Click Me</button>
+        </span>
+    </div>
+
+</body>
+    <script>
+        let div = document.getElementsByTagName('div')[0];
+        div.addEventListener('click', (event) =>{
+            if(event.target.tagName == 'BUTTON'){
+                console.log("button was clicked");
+            }else if(event.target.tagName == 'SPAN'){
+                console.log("span was clicked");
+            }else{
+                console.log("div was clicked");
+            }
+        });
+    </script>
+</html>
+<!-- Event delegation is a technique in JavaScript where you attach a single event listener to a parent element,  -->
+<!-- and it handles events for its child elements, even those added later. -->
+<!-- It works because of event bubbling — the concept where an event triggered on a child element bubbles up to its ancestors. -->
